@@ -28,4 +28,17 @@ public class DataHelper {
         return new VerificationCode("12345");
     }
 
+    @Value
+    public static class TransferInfo {
+        private String cardNumber;
+        private String startBalance;
+    }
+
+    public static TransferInfo getCardNumberFirst () {
+        return new TransferInfo("5559 0000 0000 0001","10000");
+    }
+
+    public static TransferInfo getCardNumberSecond () {
+        return new TransferInfo("5559 0000 0000 0002","10000");
+    }
 }
