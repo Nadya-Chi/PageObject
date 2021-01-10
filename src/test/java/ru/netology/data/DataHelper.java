@@ -1,4 +1,4 @@
-package ru.netology;
+package ru.netology.data;
 
 import lombok.Value;
 
@@ -40,6 +40,16 @@ public class DataHelper {
 
     public static TransferInfo getCardNumberSecond () {
         return new TransferInfo("5559 0000 0000 0002","10000");
+    }
+
+    public static int getBalanceCardReplenish(int balance, int value) {
+        int finalBalance = balance + value;
+        return finalBalance;
+    }
+
+    public static int getBalanceCardWithdraw(int balance, int value) {
+        int finalBalance = balance - value;
+        return finalBalance;
     }
 
 }
